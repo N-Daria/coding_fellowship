@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+/* default styles, imitation of content */
+.content {
+  height: 200vh;
+  width: 100%;
+  margin: 0;
+}
+
+.content__button {
+  border: none;
+  background-color: #e5266e;
+  cursor: pointer;
+  margin: 50px auto;
+  display: block;
+}
