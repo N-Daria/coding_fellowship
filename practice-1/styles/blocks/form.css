@@ -15,7 +15,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  gap: 26px 32px;
+  gap: 32px 20px;
 
   overflow: auto;
   height: -webkit-fill-available;
@@ -33,6 +33,10 @@
 .form__input-block {
   position: relative;
   width: 100%;
+}
+
+.form__input-block_short {
+  max-width: 362px;
 }
 
 .form__input-block:focus-within {
@@ -63,6 +67,7 @@
   width: 100%;
   color: #0c1014;
   border: 1px solid #d6dade;
+  margin: 0;
 }
 
 .form__input:focus,

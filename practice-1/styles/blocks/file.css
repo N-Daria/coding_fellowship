@@ -1,6 +1,9 @@
 .file {
   max-width: 175px;
   cursor: pointer;
+  position: absolute;
+  top: 122px;
+  right: 98px;
 }
 
 .file__label {

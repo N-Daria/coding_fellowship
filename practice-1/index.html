@@ -13,25 +13,9 @@
       <form class="form">
         <h2 class="form__header">Стать партнёром проекта</h2>
 
-        <label class="form__input-block">
+        <label class="form__input-block form__input-block_short">
           <p class="form__label">✱ Название организации</p>
           <input type="text" name="companyName" required class="form__input" />
-        </label>
-
-        <label class="form__input-block">
-          <p class="form__label">✱ Телефон</p>
-          <input
-            type="tel"
-            name="telephone"
-            required
-            class="form__input"
-            pattern="[0-9]{11}"
-          />
-        </label>
-
-        <label class="form__input-block">
-          <p class="form__label">✱ E-mail</p>
-          <input type="email" name="email" required class="form__input" />
         </label>
 
         <div class="form__input-block file">
@@ -58,6 +42,16 @@
             <div id="gamediv"></div>
           </label>
         </div>
+
+        <label class="form__input-block form__input-block_short">
+          <p class="form__label">✱ Телефон</p>
+          <input type="tel" name="telephone" required class="form__input" />
+        </label>
+
+        <label class="form__input-block form__input-block_short">
+          <p class="form__label">✱ E-mail</p>
+          <input type="email" name="email" required class="form__input" />
+        </label>
 
         <div
           class="form__input-block form__input-block_socials form__input-block_socials_select"

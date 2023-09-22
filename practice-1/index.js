@@ -1,8 +1,9 @@
 const openPopupButton = document.querySelector(".content__button");
+const form = document.querySelector(".form");
 const poopup = document.querySelector(".popup");
-const uploadImage = document.querySelector(".upload");
-const cancelPhotoUploading = document.querySelector(".file__cancel");
-const photo = document.querySelector(".file__photo");
+const uploadImage = form.querySelector(".upload");
+const cancelPhotoUploading = form.querySelector(".file__cancel");
+const photo = form.querySelector(".file__photo");
 
 // close / open popup
 
@@ -12,6 +13,32 @@ const openPopup = () => {
 
 const closePopup = () => {
   poopup.classList.remove("popup_opened");
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  // checkValidate
+  // serialize
+  // send
+};
+
+const handleUpload = (e) => {
+  e.preventDefault();
+
+  let file = e.target.files[0];
+
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+
+  reader.onload = function () {
+    photo.setAttribute("src", "");
+    photo.setAttribute("src", reader.result);
+  };
+
+  reader.onerror = function () {
+    console.log(reader.error);
+  };
 };
 
 openPopupButton.addEventListener("click", openPopup);
@@ -34,20 +61,4 @@ cancelPhotoUploading.addEventListener("click", () => {
 
 uploadImage.addEventListener("change", handleUpload);
 
-function handleUpload(e) {
-  e.preventDefault();
-
-  let file = e.target.files[0];
-
-  let reader = new FileReader();
-  reader.readAsDataURL(file);
-
-  reader.onload = function () {
-    photo.setAttribute("src", "");
-    photo.setAttribute("src", reader.result);
-  };
-
-  reader.onerror = function () {
-    console.log(reader.error);
-  };
-}
+form.addEventListener("submit", handleSubmit);
