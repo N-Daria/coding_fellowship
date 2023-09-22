@@ -16,6 +16,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 26px 32px;
+
+  overflow: auto;
+  height: -webkit-fill-available;
+  height: fill-available;
 }
 
 .form__header {
@@ -49,7 +53,8 @@
   font-weight: 700;
 }
 
-.form__input {
+.form__input,
+.form__select {
   padding: 22px 16px 8px;
   font-family: "PTSans", sans-serif;
   font-size: 16px;
@@ -60,6 +65,94 @@
   border: 1px solid #d6dade;
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__select:focus {
   outline: none;
+}
+
+.form__input_socials {
+  padding: 16px;
+}
+
+.form__select {
+  appearance: none;
+}
+
+.form__input-block_socials::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+
+.form__input-block_socials_select::after {
+  background-image: url(../img/Group.svg);
+}
+
+.form__input-block_socials_site::after {
+  background-image: url(../img/global.svg);
+  background-size: 18px;
+}
+
+.form__input-block_socials_vk::after {
+  background-image: url(../img/vk.svg);
+  background-size: 18px;
+}
+
+.form__input-block_socials_odnoklassniki::after {
+  background-image: url(../img/odnoklassniki.svg);
+  background-size: 18px;
+}
+
+.form__input-block_socials_facebook::after {
+  background-image: url(../img/facebook.svg);
+  background-size: 18px;
+}
+
+.form__input-block_socials_instagram::after {
+  background-image: url(../img/Instagram.svg);
+  background-size: 18px;
+}
+
+.form__input-block_socials_youtube::after {
+  background-image: url(../img/youtube.svg);
+  background-size: 18px;
+}
+
+.form__button-block {
+  width: 100%;
+}
+
+.form__button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.form__submit {
+  background-color: #e5266e;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+  padding: 16px;
+}
+
+.form__reset {
+  font-family: "PTSans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #0848c0;
+  padding: 16px;
+  background-color: inherit;
 }

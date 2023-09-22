@@ -59,16 +59,88 @@
           </label>
         </div>
 
-        <div class="form__input-block">
+        <div
+          class="form__input-block form__input-block_socials form__input-block_socials_select"
+        >
           <p class="form__label">✱ Направление</p>
-          <select name="subscription">
+          <select class="form__select" name="field">
             <option value="ecology">Экология</option>
             <option value="other">Other</option>
           </select>
         </div>
+
+        <label
+          class="form__input-block form__input-block_socials form__input-block_socials_site"
+        >
+          <p class="hidden">сайт</p>
+          <input
+            type="url"
+            name="web-site"
+            class="form__input form__input_socials"
+          />
+        </label>
+
+        <label
+          class="form__input-block form__input-block_socials form__input-block_socials_vk"
+        >
+          <p class="hidden">вконтакте</p>
+          <input type="url" name="vk" class="form__input form__input_socials" />
+        </label>
+
+        <label
+          class="form__input-block form__input-block_socials form__input-block_socials_odnoklassniki"
+        >
+          <p class="hidden">одноклассники</p>
+          <input
+            type="url"
+            name="odnoklassniki"
+            class="form__input form__input_socials"
+          />
+        </label>
+
+        <label
+          class="form__input-block form__input-block_socials form__input-block_socials_facebook"
+        >
+          <p class="hidden">фэйсбук</p>
+          <input
+            type="url"
+            name="facebook"
+            class="form__input form__input_socials"
+          />
+        </label>
+
+        <label
+          class="form__input-block form__input-block_socials form__input-block_socials_instagram"
+        >
+          <p class="hidden">инстаграм</p>
+          <input
+            type="url"
+            name="instagram"
+            class="form__input form__input_socials"
+          />
+        </label>
+
+        <label
+          class="form__input-block form__input-block_socials form__input-block_socials_youtube"
+        >
+          <p class="hidden">ютуб</p>
+          <input
+            type="url"
+            name="youtube"
+            class="form__input form__input_socials"
+          />
+        </label>
+
+        <div class="form__button-block">
+          <button type="submit" class="form__button form__submit">
+            Стать партнёром проекта
+          </button>
+          <button type="reset" class="form__button form__reset">
+            Отменить
+          </button>
+        </div>
       </form>
     </section>
-
     <script src="./index.js"></script>
   </body>
 </html>
