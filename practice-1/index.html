@@ -10,21 +10,62 @@
     <button class="content__button" type="button">Открыть попап</button>
 
     <section class="popup">
-      <h2 class="popup__header">Стать партнёром проекта</h2>
-      <form class="form" name="popup__container">
-        <!-- <h2 class="popup__header">hhhhhhhhhhhhhhhhhhhhhhhh</h2> -->
+      <form class="form">
+        <h2 class="form__header">Стать партнёром проекта</h2>
 
         <label class="form__input-block">
           <p class="form__label">✱ Название организации</p>
           <input type="text" name="companyName" required class="form__input" />
         </label>
 
-        <input
-          type="tel"
-          name="phone"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-          required
-        />
+        <label class="form__input-block">
+          <p class="form__label">✱ Телефон</p>
+          <input
+            type="tel"
+            name="telephone"
+            required
+            class="form__input"
+            pattern="[0-9]{11}"
+          />
+        </label>
+
+        <label class="form__input-block">
+          <p class="form__label">✱ E-mail</p>
+          <input type="email" name="email" required class="form__input" />
+        </label>
+
+        <div class="form__input-block file">
+          <p class="file__label">✱ Логотип (jpeg, png)</p>
+
+          <button type="button" class="file__cancel"></button>
+          <label>
+            <div class="file__input">
+              <span class="file__text">Выберите файл</span>
+              <img
+                class="file__photo"
+                alt="фотография"
+                src="./styles/img/Ellipse.png"
+              />
+            </div>
+            <input
+              type="file"
+              accept=".png, .jpeg"
+              name="photo"
+              required
+              class="hidden upload"
+            />
+
+            <div id="gamediv"></div>
+          </label>
+        </div>
+
+        <div class="form__input-block">
+          <p class="form__label">✱ Направление</p>
+          <select name="subscription">
+            <option value="ecology">Экология</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
       </form>
     </section>
 

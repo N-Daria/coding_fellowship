@@ -1,0 +1,89 @@
+.file {
+  max-width: 175px;
+  cursor: pointer;
+}
+
+.file__label {
+  position: static;
+  font-weight: 700;
+  margin: 0 0 7px 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a6e72;
+}
+
+.file__label::first-letter {
+  color: #d90000;
+  font-weight: 700;
+}
+
+.file__cancel {
+  border-radius: 50%;
+  background-color: white;
+  height: 36px;
+  width: 36px;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 28px;
+  z-index: 1;
+  cursor: pointer;
+
+  background-image: url(../img/Icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+}
+
+.file__text {
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: underline;
+  text-align: center;
+  max-width: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.file__text::before {
+  content: "";
+  width: 29px;
+  height: 29px;
+  display: block;
+  margin: 0 auto;
+
+  background-image: url(../img/uploadImage.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 29px;
+}
+
+.file__input {
+  border-radius: 50%;
+  width: 163px;
+  height: 163px;
+  overflow: hidden;
+  object-fit: cover;
+  margin: 0 auto;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file__input::after {
+  content: "";
+  width: 163px;
+  height: 163px;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.file__input:hover {
+  opacity: 0.5;
+}

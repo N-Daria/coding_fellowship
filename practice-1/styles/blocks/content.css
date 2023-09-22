@@ -1,12 +1,25 @@
+/* default styles */
+
 * {
   box-sizing: border-box;
 }
 
-/* default styles, imitation of content */
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
 .content {
-  height: 200vh;
   width: 100%;
   margin: 0;
+
+  /* content imitation */
+  height: 200vh;
 }
 
 .content__button {
