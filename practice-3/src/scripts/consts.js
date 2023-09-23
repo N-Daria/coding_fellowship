@@ -5,6 +5,8 @@ export const userIdSort = document.querySelector(".table__header_userId");
 export const titleSort = document.querySelector(".table__header_title");
 export const bodySort = document.querySelector(".table__header_body");
 
+export const searchInput = document.querySelector(".search");
+
 export const sortConfig = {
   id: {
     name: "id",

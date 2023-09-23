@@ -9,9 +9,11 @@ import {
   titleSort,
   bodySort,
   sortConfig,
+  searchInput,
 } from "./consts";
 
 let data = [];
+let renderedData = [];
 const idSorting = new Sorting();
 const titleSorting = new Sorting();
 const bodySorting = new Sorting();
@@ -21,6 +23,7 @@ const initialRender = () => {
   getData()
     .then((res) => {
       data = res;
+      renderedData = res;
 
       res.forEach((el) => {
         const newItem = new TableRow(el);
@@ -33,30 +36,46 @@ const initialRender = () => {
 const rerender = () => {
   tableContainer.replaceChildren();
 
-  data.forEach((el) => {
+  renderedData.forEach((el) => {
     const newItem = new TableRow(el);
     tableContainer.prepend(newItem.getRow());
   });
 };
 
 idSort.addEventListener("click", () => {
-  idSorting.sort(sortConfig.id, data);
+  idSorting.sort(sortConfig.id, renderedData);
   rerender();
 });
 
 userIdSort.addEventListener("click", () => {
-  userIdSorting.sort(sortConfig.userId, data);
+  userIdSorting.sort(sortConfig.userId, renderedData);
   rerender();
 });
 
 titleSort.addEventListener("click", () => {
-  titleSorting.sort(sortConfig.title, data);
+  titleSorting.sort(sortConfig.title, renderedData);
   rerender();
 });
 
 bodySort.addEventListener("click", () => {
-  bodySorting.sort(sortConfig.body, data);
+  bodySorting.sort(sortConfig.body, renderedData);
   rerender();
+});
+
+searchInput.addEventListener("input", () => {
+  if (event.target.value.length >= 3) {
+    const request = event.target.value;
+    renderedData = [...data];
+    renderedData = renderedData.filter(
+      (el) => el.title.includes(request) || el.body.includes(request)
+    );
+
+    rerender();
+  }
+  if (event.target.value.length === 0) {
+    renderedData = [...data];
+    rerender();
+  }
 });
 
 initialRender();
