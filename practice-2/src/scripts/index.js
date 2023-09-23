@@ -1,3 +1,5 @@
+import "../index.css";
+
 const tableContainer = document.querySelector(".table__body");
 
 const getData = () => {
