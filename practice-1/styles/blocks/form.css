@@ -39,6 +39,12 @@
   max-width: 362px;
 }
 
+@media (max-width: 760px) {
+  .form__input-block_short {
+    max-width: 100%;
+  }
+}
+
 .form__input-block:focus-within {
   outline: 1px solid #d90000;
 }

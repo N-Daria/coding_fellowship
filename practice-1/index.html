@@ -13,16 +13,11 @@
       <form class="form">
         <h2 class="form__header">Стать партнёром проекта</h2>
 
-        <label class="form__input-block form__input-block_short">
-          <p class="form__label">✱ Название организации</p>
-          <input type="text" name="companyName" required class="form__input" />
-        </label>
-
-        <div class="form__input-block file">
+        <div class="file">
           <p class="file__label">✱ Логотип (jpeg, png)</p>
 
           <button type="button" class="file__cancel"></button>
-          <label>
+          <label class="file__box">
             <div class="file__input">
               <span class="file__text">Выберите файл</span>
               <img
@@ -30,18 +25,22 @@
                 alt="фотография"
                 src="./styles/img/Ellipse.png"
               />
-            </div>
-            <input
-              type="file"
-              accept=".png, .jpeg"
-              name="photo"
-              required
-              class="hidden upload"
-            />
 
-            <div id="gamediv"></div>
+              <input
+                type="file"
+                accept=".png, .jpeg"
+                name="photo"
+                required
+                class="hidden upload"
+              />
+            </div>
           </label>
         </div>
+
+        <label class="form__input-block form__input-block_short">
+          <p class="form__label">✱ Название организации</p>
+          <input type="text" name="companyName" required class="form__input" />
+        </label>
 
         <label class="form__input-block form__input-block_short">
           <p class="form__label">✱ Телефон</p>

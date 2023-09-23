@@ -6,6 +6,13 @@
   right: 98px;
 }
 
+@media (max-width: 760px) {
+  .file {
+    position: static;
+    margin: 0 auto;
+  }
+}
+
 .file__label {
   position: static;
   font-weight: 700;
@@ -37,6 +44,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px;
+}
+
+.file__cancel:focus {
+  outline: 3px solid #d90000;
+}
+
+.file__box:focus-within {
+  outline: 3px solid #d90000;
+  width: 100%;
+  height: fit-content;
+  display: inline-block;
+  border-radius: 50%;
 }
 
 .file__text {
