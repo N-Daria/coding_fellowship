@@ -1,0 +1,7 @@
+.table__header {
+  background-color: lightblue;
+}
+
+.table__item {
+  outline: 1px solid lightgray;
+}
